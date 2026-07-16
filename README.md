@@ -143,12 +143,10 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 - Cell identities were assigned using a combination of:
   - Literature-guided canonical marker genes
-  - Cluster-specific gene-expression patterns
   - Automated reference-based annotation using **SingleR**
   - Manual review of epithelial, immune, stromal, and endothelial marker expression
 
 - Major annotated cell populations included:
-
   - Epithelial cells
   - T cells
   - B cells
@@ -158,6 +156,18 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
   - Endothelial cells
 
 - Cell-type proportions were calculated by sample and experimental condition to compare cellular composition between tumor and normal tissues.
+
+- R scripts with "6.1-6.5_" as prefixes can be found in this [folder](scripts).
+
+**Figures:**
+##  ∫marker gene expression from Sun et al. (2024) and other ≈
+markers across Harmony-integrated clusters and experimental conditions
+
+![Comparison of data integration approaches across samples](assets/Figure%2011_%20Integration%20analysis.png)
+
+##  UMAP visualizations of integrated datasets colored by cell cycle phases
+
+![UMAP visualizations of integrated datasets colored by cell cycle phases](assets/Figure%2012_%20Integration%20analysis_cell%20cycle%20score.png)
 
 ---
 
