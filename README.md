@@ -139,19 +139,7 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ---
 
-### 6. Integrated Dimensionality Reduction and Clustering
-
-Following data integration:
-
-- PCA was used to summarize major sources of variation.
-- Graph-based clustering was performed on the integrated dataset.
-- UMAP and t-SNE embeddings were generated for visualization.
-- Cell-cycle scores were reevaluated on the integrated dataset.
-- Cluster structure and sample distribution were examined before cell-type annotation.
-
----
-
-### 7. Cell-Type Annotation and Proportion Analysis
+### 6. Cell-Type Annotation and Proportion Analysis
 
 Cell identities were assigned using a combination of:
 
@@ -174,7 +162,7 @@ Cell-type proportions were calculated by sample and experimental condition to co
 
 ---
 
-### 8. Differential Expression and Functional Enrichment Analysis
+### 7. Differential Expression and Functional Enrichment Analysis
 
 Differential expression analysis was performed between **tumor and normal cells within each annotated cell type**.
 
@@ -194,7 +182,7 @@ The analysis identified transcriptional alterations associated with epithelial r
 
 ---
 
-### 9. Gene Regulatory Network Analysis
+### 8. Gene Regulatory Network Analysis
 
 Gene regulatory network analysis was performed using **SCENIC**.
 
@@ -211,7 +199,7 @@ Regulatory programs involving transcription factors such as **TP63, TP53, HES1, 
 
 ---
 
-### 10. Cell-Cell Communication Analysis
+### 9. Cell-Cell Communication Analysis
 
 Intercellular signaling networks were evaluated using **CellChat**.
 
