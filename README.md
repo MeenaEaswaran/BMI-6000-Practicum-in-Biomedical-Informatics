@@ -7,7 +7,7 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 
 ## Project Overview
 
-## Workflow Overview
+### Workflow Overview
 
 ![Single-cell RNA-seq workflow](assets/Figure%201_Bioinformatic%20workflow.png)
 
@@ -27,7 +27,7 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 - **Toolkit used:** Seurat version 5.0 R package for creating a Seurat object, initial quality control performed per sample, and data preprocessing.
 
 - **Quality-control metrics:**
-  - nFeature_RNA`
+  - `nFeature_RNA`
   - `nCount_RNA`
   - `percent.mt`
   - `percent.ribo`
@@ -59,7 +59,7 @@ Cells with low transcript complexity, unusually high transcript counts, elevated
 
 -  Mitochondrial, ribosomal, and hemoglobin-expression percentages were evaluated as technical covariates.
 - `percent.mt`, `percent.ribo`, and `percent.hb` were regressed during normalization.
--  G1, S, and G2/M-phase cell-cycle scores were assessed at the individual-sample level and were also regressed during normalization.
+-  `G1, S, and G2/M-phase` cell-cycle scores were assessed at the individual-sample level and were also regressed during normalization.
 
 Cell cycle effects had minimal influence on the overall transcriptional heterogeneity in both normal and tumor samples during SCTransform normalization.
 
