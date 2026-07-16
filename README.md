@@ -7,7 +7,7 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 
 ## Project Overview
 
-### Workflow Overview
+#### Bioinformatic Workflow 
 
 ![Single-cell RNA-seq workflow](assets/Figure%201_Bioinformatic%20workflow.png)
 
