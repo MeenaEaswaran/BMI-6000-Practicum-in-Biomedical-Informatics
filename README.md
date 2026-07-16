@@ -100,13 +100,13 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ##  Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration
 
-![Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration](assets/Figure%207_%20initial_LDA_t-SNEs_normal%20and%20tumor.png)
+![Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration](Figure%208_%20initial_LDA_t-SNEs_normal%20and%20tumor.png)
 
 ##  Identification and removal of doublets from the normal samples
 ![Identification and removal of doublets from the normal samples](assets/Figure%209_%20Doubletfinder_normal.png)
 
 ##  Identification and removal of doublets from the tumor samples
-![Identification and removal of doublets from the tumor samples](assets/Figure%209_%20Doubletfinder_tumor.png)
+![Identification and removal of doublets from the tumor samples](assets/Figure%2010_%20Doubletfinder_tumor.png)
 
 ---
 
