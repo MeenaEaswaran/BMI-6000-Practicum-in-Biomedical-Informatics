@@ -11,7 +11,7 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 
 The analysis was performed primarily in **R** using **Seurat version 5.0**, with additional tools for data normalization, doublet detection, automated cell-type annotation, functional enrichment, gene regulatory network analysis, and cell-cell communication analysis.
 
-![Single-cell RNA-seq workflow](assets/Figure%201_Bioinformatic%20workflow.png)
+<img src="assets/Figure%201_Bioinformatic%20workflow.png" alt="Single-cell RNA-seq workflow" width="600">
 
 ---
 
@@ -46,11 +46,11 @@ Cells with low transcript complexity, unusually high transcript counts, elevated
 
 ## Normal samples initial QC
 
-![Normal samples Inital QC](assets/Figure%202_Filtering%20_normal%20samples.png)
+<img src="assets/Figure%202_Filtering%20_normal%20samples.png" alt="Normal samples Inital QC" width="600">
 
 ## Tumor samples initial QC
 
-![Tumor samples initial QC](assets/Figure%203_Filtering%20tumor%20samples.png)
+<img src="assets/Figure%203_Filtering%20tumor%20samples.png" alt="Tumor samples initial QC" width="600">
 
 ---
 
@@ -67,11 +67,11 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ## Normal samples: Effect of regressing cell cycle scores during SCTransform normalization
 
-![Normal samples: Effect of regressing cell cycle scores during SCTransform normalization](assets/Figure%204_sctransform%20with%20cell%20cycle%20score%20regression_normal.png)
+<img src="assets/Figure%204_sctransform%20with%20cell%20cycle%20score%20regression_normal.png" alt="Normal samples: Effect of regressing cell cycle scores during SCTransform normalization" width="600">
 
 ## Tumor samples: Effect of regressing cell cycle scores during SCTransform normalization
 
-![Tumor samples: Effect of regressing cell cycle scores during SCTransform normalization](assets/Figure%205_sctransform%20with%20cell%20cycle%20score%20regression_tumor.png)
+<img src="assets/Figure%205_sctransform%20with%20cell%20cycle%20score%20regression_tumor.png" alt="Tumor samples: Effect of regressing cell cycle scores during SCTransform normalization" width="600">
 
 ---
 
@@ -90,23 +90,23 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ##  Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization
 
-![Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization](assets/Figure%206_%20Elbowplots_normalandtumor.png)
+<img src="assets/Figure%206_%20Elbowplots_normalandtumor.png" alt="Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization" width="600">
 
 ##  Initial UMAP projections of individual normal and tumor samples before doublet removal and data integration
 
-![Initial UMAP projections of individual normal and tumor samples before doublet removal and data integration](assets/Figure%207_%20initial_LDA_UMAPs_normal%20and%20tumor.png)
+<img src="assets/Figure%207_%20initial_LDA_UMAPs_normal%20and%20tumor.png" alt="Initial UMAP projections of individual normal and tumor samples before doublet removal and data integration" width="600">
 
 ##  Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration
 
-![Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration](assets/Figure%208_%20initial_LDA_t-SNEs_normal%20and%20tumor.png)
+<img src="assets/Figure%208_%20initial_LDA_t-SNEs_normal%20and%20tumor.png" alt="Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration" width="600">
 
 ##  Identification and removal of doublets from the normal samples
 
-![Identification and removal of doublets from the normal samples](assets/Figure%209_%20Doubletfinder_normal.png)
+<img src="assets/Figure%209_%20Doubletfinder_normal.png" alt="Identification and removal of doublets from the normal samples" width="600">
 
 ##  Identification and removal of doublets from the tumor samples
 
-![Identification and removal of doublets from the tumor samples](assets/Figure%2010_%20Doubletfinder_tumor.png)
+<img src="assets/Figure%2010_%20Doubletfinder_tumor.png" alt="Identification and removal of doublets from the tumor samples" width="600">
 
 ---
 
@@ -127,11 +127,11 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ##  Comparison of data integration approaches across samples
 
-![Comparison of data integration approaches across samples](assets/Figure%2011_%20Integration%20analysis.png)
+<img src="assets/Figure%2011_%20Integration%20analysis.png" alt="Comparison of data integration approaches across samples" width="600">
 
 ##  UMAP visualizations of integrated datasets colored by cell cycle phases
 
-![UMAP visualizations of integrated datasets colored by cell cycle phases](assets/Figure%2012_%20Integration%20analysis_cell%20cycle%20score.png)
+<img src="assets/Figure%2012_%20Integration%20analysis_cell%20cycle%20score.png" alt="UMAP visualizations of integrated datasets colored by cell cycle phases" width="600">
 
 ---
 
@@ -146,11 +146,11 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 - Major annotated cell populations included:
   - Epithelial cells
-  - T cells
-  - B cells
-  - Myeloid cells
-  - Natural killer cells
   - Fibroblasts
+  - Myeloid cells
+  - NK cells
+  - B-cells
+  - T-cells
   - Endothelial cells
 
 - Cell-type proportions were calculated by sample and experimental condition to compare cellular composition between tumor and normal tissues.
@@ -159,71 +159,126 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ##  Literature-guided marker gene expression across Harmony-integrated clusters and experimental conditions
 
-![Literature-guided marker gene expression across Harmony-integrated clusters and experimental conditions](assets/Figure%2014_%20dotplot_originalstudyandliteraturemarkers_cluster_NandT.png)
+<img src="assets/Figure%2014_%20dotplot_originalstudyandliteraturemarkers_cluster_NandT.png" alt="Literature-guided marker gene expression across Harmony-integrated clusters and experimental conditions" width="600">
 
 ##  Visualization of manually annotated cell clusters in the Harmony-integrated dataset
 
-![Visualization of manually annotated cell clusters in the Harmony-integrated dataset](assets/Figure%2015_%20Manual%20cell%20type%20annotation_UMAP%20and%20t-SNE.png)
+<img src="assets/Figure%2015_%20Manual%20cell%20type%20annotation_UMAP%20and%20t-SNE.png" alt="Visualization of manually annotated cell clusters in the Harmony-integrated dataset" width="600">
 
 ##  SingleR automated cell type annotations using multiple reference datasets 
 
-![SingleR automated cell type annotations using multiple reference datasets](assets/Figure%2016_SingleRAutomationonly.png)
+<img src="assets/Figure%2016_SingleRAutomationonly.png" alt="SingleR automated cell type annotations using multiple reference datasets" width="600">
 
 ##  Manual + SingleR-automated cell type annotation and composition analysis for the Harmony-integrated dataset
-![Manual + SingleR-automated cell type annotation and composition analysis for the Harmony-integrated dataset](assets/Figure%2017_finalcellannotation_cellproportion.png)
+
+<img src="assets/Figure%2017_finalcellannotation_cellproportion.png" alt="Manual + SingleR-automated cell type annotation and composition analysis for the Harmony-integrated dataset" width="600">
 
 ---
 
 ### 7. Differential Expression and Functional Enrichment Analysis
 
-Differential expression analysis was performed between **tumor and normal cells within each annotated cell type**.
+- Differential expression analysis was performed between **tumor and normal cells within each annotated cell type**.
+  - **Comparison:** Tumor vs. Normal
+  - **Differential-expression criteria:**
+    - Adjusted *p*-value < 0.05
+    - |Average log2 fold change| > 0.58
 
-- **Comparison:** Tumor vs. Normal
-- **Differential-expression criteria:**
-  - Adjusted *p*-value < 0.05
-  - |Average log2 fold change| > 0.58
+-Differentially expressed genes were evaluated using **[Metascape](https://metascape.org/gp/index.html#/main/step1)** functional enrichment tool.
+  - GO Biological Process (BP), Cellular Compartment (CC), and Molecular Function (MF), and KEGG pathway enrichments.
 
-Differentially expressed genes were evaluated using:
-
-- Gene Ontology
-- KEGG pathways
-- Metascape functional enrichment
 - Cell-type-specific biological interpretation
 
-The analysis identified transcriptional alterations associated with epithelial remodeling, immune activation, extracellular-matrix organization, tumor-associated signaling, and changes in tissue homeostasis.
+- The analysis identified transcriptional alterations associated with extracellular-matrix  remodeling, immune activation, and changes in stress responses.
+
+- R scripts with "7.1_-7.2.7_" as prefixes can be found in this [folder](scripts).
+
+##  Differential expression and functional enrichment analysis of epithelial cells 
+
+<img src="assets/Figure%2018_Differentialexpression_functionalenrichment_epithelial%20cells.png" alt="Differential expression and functional enrichment analysis of epithelial cells" width="600">
+
+##  Differential expression and functional enrichment analysis of fibroblasts
+
+<img src="assets/Figure%2019_Differentialexpression_functionalenrichment_fibroblasts.png" alt="Differential expression and functional enrichment analysis of fibroblasts" width="600">
+
+##  Differential expression and functional enrichment analysis of myeloid cells 
+
+<img src="assets/Figure%2020_Differentialexpression_functionalenrichment_myeloidcells.png" alt="Differential expression and functional enrichment analysis of myeloid cells" width="600">
+
+##  Differential expression and functional enrichment analysis of NK cells 
+
+<img src="assets/Figure%2021_Differentialexpression_functionalenrichment_NKcells.png" alt="Differential expression and functional enrichment analysis of NK cells" width="600">
+
+##  Differential expression and functional enrichment analysis of B-cells 
+
+<img src="assets/Figure%2022_Differentialexpression_functionalenrichment_Bcells.png" alt="Differential expression and functional enrichment analysis of B-cells" width="600">
+
+##  Differential expression and functional enrichment analysis of T-cells 
+
+<img src="assets/Figure%2023_Differentialexpression_functionalenrichment_Tcells.png" alt="Differential expression and functional enrichment analysis of T-cells" width="600">
+
+##  Differential expression and functional enrichment analysis of endothelial cells 
+
+<img src="assets/Figure%2024_Differentialexpression_functionalenrichment_Endothelialcells.png" alt="Differential expression and functional enrichment analysis of endothelial cells" width="600">
 
 ---
 
 ### 8. Gene Regulatory Network Analysis
 
-Gene regulatory network analysis was performed using **SCENIC**.
+- Gene regulatory network analysis was performed using **Single-cell regulatory network inference and clustering (SCENIC; R version)**.
 
-SCENIC was used to:
+- SCENIC was used to:
+  - Infer regulon activity between tumor and normal conditions
+  - Examine cell-type-specific transcriptional regulation
 
-- Identify transcription factor–target gene modules
-- Infer regulon activity
-- Compare regulatory programs between tumor and normal conditions
-- Examine cell-type-specific transcriptional regulation
+- Distinct transcriptional regulatory patterns between tumor and normal conditions across each cell type were observed.
 
-Complementary transcription factor enrichment was performed using **Metascape** and the **TRRUST** database.
+- R scripts with "10.1_-10.3_" as prefixes can be found in this [folder](scripts).
 
-Regulatory programs involving transcription factors such as **TP63, TP53, HES1, KLF, ETS, STAT, FOS, and JUN family members** were examined in the context of epithelial transformation and tumor-associated signaling.
+##  SCENIC regulon activity heatmap
+
+<img src="assets/Figure%2025_SCENIC_heatmap.png" alt="SCENIC regulon activity heatmap" width="600">
 
 ---
 
 ### 9. Cell-Cell Communication Analysis
 
-Intercellular signaling networks were evaluated using **CellChat**.
+- Intercellular signaling networks were evaluated using **CellChat** R package, to identify ligand-receptor interactions across the tumor and normal datasets.
+  
+- This analysis was used to investigate how tumor-associated epithelial, immune, endothelial, and stromal populations may reshape the local tissue microenvironment.
 
-Tumor and normal datasets were compared based on:
+- R scripts with "9.1_-9.3_" as prefixes can be found in this [folder](scripts).
 
-- Number of inferred interactions
-- Overall interaction strength
-- Sender and receiver cell populations
-- Signaling pathway activity
-- Ligand-receptor interactions
+##  Cell-cell communication analysis of the normal and tumor samples
 
-This analysis was used to investigate how tumor-associated epithelial, immune, endothelial, and stromal populations may reshape the local tissue microenvironment.
+<img src="assets/Figure%2027_Intercellularcommunication_cellchat.png" alt="Cell-cell communication analysis of the normal and tumor samples" width="600">
+
+##  Epithelial cells: Significant L-R interactions
+
+<img src="assets/Figure%2028_Sig_L-R_epithelialcells.png" alt="Epithelial cells: Significant L-R interactions" width="600">
+
+##  Fibroblasts: Significant L-R interactions
+
+<img src="assets/Figure%2029_Sig_L-R_fibroblasts.png" alt="Fibroblasts: Significant L-R interactions" width="600">
+
+##  Myeloid cells: Significant L-R interactions
+
+<img src="assets/Figure%2030_Sig_L-R_myeloidcells.png" alt="Myeloid cells: Significant L-R interactions" width="600">
+
+##  NK cells: Significant L-R interactions 
+
+<img src="assets/Figure%2031_Sig_L-R_NKcells.png" alt="NK cells: Significant L-R interactions " width="600">
+
+##  B-cells: Significant L-R interactions 
+
+<img src="assets/Figure%2032_Sig_L-R_Bcells.png" alt="B-cells: Significant L-R interactions" width="600">
+
+##  T-cells: Significant L-R interactions 
+
+<img src="assets/Figure%2033_Sig_L-R_Tcells.png" alt="T-cells: Significant L-R interactions " width="600">
+
+##  Endothelial cells: Significant L-R interactions 
+
+<img src="assets/Figure%2034_Sig_L-R_Endothelialcells.png" alt="Endothelial cells: Significant L-R interactions " width="600">
 
 ---
 
