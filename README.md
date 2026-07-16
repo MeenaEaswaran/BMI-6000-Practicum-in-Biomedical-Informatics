@@ -76,7 +76,7 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ---
 
-### 4. Sample-Level Dimensionality Reduction and Clustering
+### 4. Sample-Level Dimensionality Reduction, Clustering, Doublet Detection and Removal
 
 Initial dimensionality reduction and clustering were performed independently for each sample.
 
@@ -88,17 +88,13 @@ Initial dimensionality reduction and clustering were performed independently for
 
 These analyses were used to evaluate sample quality, identify major cell populations, examine technical effects, and support doublet detection.
 
----
-
-### 5. Doublet Detection and Removal
-
 - Doublets were identified independently within each sample using the **DoubletFinder** R package.
 - Only cells classified as singlets were retained for downstream integration and analysis.
 - Doublet removal was performed before integration to reduce the influence of artificial cell profiles on clustering and cell-type annotation.
 
 ---
 
-### 6. Data Integration and Batch-Effect Correction
+### 5. Data Integration and Batch-Effect Correction
 
 Multiple integration approaches were evaluated to reduce patient- and sample-specific batch effects while preserving biologically meaningful variation.
 
@@ -111,7 +107,7 @@ The resulting embeddings and cluster structures were compared across methods. **
 
 ---
 
-### 7. Integrated Dimensionality Reduction and Clustering
+### 6. Integrated Dimensionality Reduction and Clustering
 
 Following data integration:
 
@@ -123,7 +119,7 @@ Following data integration:
 
 ---
 
-### 8. Cell-Type Annotation and Proportion Analysis
+### 7. Cell-Type Annotation and Proportion Analysis
 
 Cell identities were assigned using a combination of:
 
@@ -146,7 +142,7 @@ Cell-type proportions were calculated by sample and experimental condition to co
 
 ---
 
-### 9. Differential Expression and Functional Enrichment Analysis
+### 8. Differential Expression and Functional Enrichment Analysis
 
 Differential expression analysis was performed between **tumor and normal cells within each annotated cell type**.
 
@@ -166,7 +162,7 @@ The analysis identified transcriptional alterations associated with epithelial r
 
 ---
 
-### 10. Gene Regulatory Network Analysis
+### 9. Gene Regulatory Network Analysis
 
 Gene regulatory network analysis was performed using **SCENIC**.
 
@@ -183,7 +179,7 @@ Regulatory programs involving transcription factors such as **TP63, TP53, HES1, 
 
 ---
 
-### 11. Cell-Cell Communication Analysis
+### 10. Cell-Cell Communication Analysis
 
 Intercellular signaling networks were evaluated using **CellChat**.
 
@@ -199,9 +195,6 @@ This analysis was used to investigate how tumor-associated epithelial, immune, e
 
 ---
 
-For questions or issues, please contact the repository maintainer. Refer to the [presentation slides](assets/Easwaran_Meena_Practicum_RESULTS%20SUMMARY_COMPILED-compressed.pdf) and/or the final practicum report[final practicum report](assets/Final_Practicum_report_Fall%202025_Easwaran_Meena.pdf)for detailed information and results.
+For questions or issues, please contact the repository maintainer. Refer to the [presentation slides](assets/Easwaran_Meena_Practicum_RESULTS%20SUMMARY_COMPILED-compressed.pdf) and/or the [final practicum report](assets/Final_Practicum_report_Fall%202025_Easwaran_Meena.pdf)for detailed information and results.
 
 This repository is **solely for educational purposes and serves as a backup** for my graduate school capstone paper and Master's degree requirements related to the **BMI 6000: Practicum in Biomedical Informatics** course at McWilliams School of Biomedical Informatics at UTHealth Houston.
-
-
-
