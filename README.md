@@ -44,7 +44,6 @@ Cells with low transcript complexity, unusually high transcript counts, elevated
 
 - R scripts with "1_ and 2_" as prefixes can be found in this [folder](scripts).
 
-**Figures:**
 ## Normal samples initial QC
 
 ![Normal samples Inital QC](assets/Figure%202_Filtering%20_normal%20samples.png)
@@ -66,7 +65,6 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 - R scripts with "3_" as prefix can be found in this [folder](scripts).
 
-**Figures:**
 ## Normal samples: Effect of regressing cell cycle scores during SCTransform normalization
 
 ![Normal samples: Effect of regressing cell cycle scores during SCTransform normalization](assets/Figure%204_sctransform%20with%20cell%20cycle%20score%20regression_normal.png)
@@ -90,7 +88,6 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 - R scripts with "4.1-4.6_" as prefixes can be found in this [folder](scripts).
 
-**Figures:**
 ##  Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization
 
 ![Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization](assets/Figure%206_%20Elbowplots_normalandtumor.png)
@@ -128,7 +125,6 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 - R scripts with "5.1-5.6_" as prefixes can be found in this [folder](scripts).
 
-**Figures:**
 ##  Comparison of data integration approaches across samples
 
 ![Comparison of data integration approaches across samples](assets/Figure%2011_%20Integration%20analysis.png)
@@ -143,7 +139,9 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 - Cell identities were assigned using a combination of:
   - Literature-guided canonical marker genes
-  - Automated reference-based annotation using **SingleR**
+  - Cluster-specific gene-expression patterns
+  - Automated reference-based annotation using the **SingleR** R package
+    - Blueprint/ENCODE, HPCA, DICE, and MonaccoImmuneData reference datasets
   - Manual review of epithelial, immune, stromal, and endothelial marker expression
 
 - Major annotated cell populations included:
@@ -159,15 +157,20 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 - R scripts with "6.1-6.5_" as prefixes can be found in this [folder](scripts).
 
-**Figures:**
-##  ∫marker gene expression from Sun et al. (2024) and other ≈
-markers across Harmony-integrated clusters and experimental conditions
+##  Literature-guided marker gene expression across Harmony-integrated clusters and experimental conditions
 
-![Comparison of data integration approaches across samples](assets/Figure%2011_%20Integration%20analysis.png)
+![Literature-guided marker gene expression across Harmony-integrated clusters and experimental conditions](assets/Figure%2014_%20dotplot_originalstudyandliteraturemarkers_cluster_NandT.png)
 
-##  UMAP visualizations of integrated datasets colored by cell cycle phases
+##  Visualization of manually annotated cell clusters in the Harmony-integrated dataset
 
-![UMAP visualizations of integrated datasets colored by cell cycle phases](assets/Figure%2012_%20Integration%20analysis_cell%20cycle%20score.png)
+![Visualization of manually annotated cell clusters in the Harmony-integrated dataset](assets/Figure%2015_%20Manual%20cell%20type%20annotation_UMAP%20and%20t-SNE.png)
+
+##  SingleR automated cell type annotations using multiple reference datasets 
+
+![SingleR automated cell type annotations using multiple reference datasets](assets/Figure%2016_SingleRAutomationonly.png)
+
+##  Manual + SingleR-automated cell type annotation and composition analysis for the Harmony-integrated dataset
+![Manual + SingleR-automated cell type annotation and composition analysis for the Harmony-integrated dataset](assets/Figure%2017_finalcellannotation_cellproportion.png)
 
 ---
 
