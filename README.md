@@ -41,7 +41,7 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 
 Cells with low transcript complexity, unusually high transcript counts, elevated mitochondrial RNA, or excessive hemoglobin-gene expression were removed.
 
-- R scripts can be found in this [folder](scripts).
+- R scripts with 1_ and 2_ as prefixes can be found in this [folder](scripts).
 
 **Figures:**
 ## Normal samples initial QC
@@ -55,7 +55,7 @@ Cells with low transcript complexity, unusually high transcript counts, elevated
 ---
 
 ### 3. Normalization and Cell-Cycle Assessment
-**- **Toolkit used:** the sctransform R package for independent-sample normalization, in place of the standard Seurat datapreprocessing workflow.
+**- **Packages used:** the sctransform R package for independent-sample normalization, in place of the standard Seurat data normalization workflow.
 
 -  Mitochondrial, ribosomal, and hemoglobin-expression percentages were evaluated as technical covariates.
 - `percent.mt`, `percent.ribo`, and `percent.hb` were regressed during normalization.
@@ -63,7 +63,7 @@ Cells with low transcript complexity, unusually high transcript counts, elevated
 
 Cell cycle effects had minimal influence on the overall transcriptional heterogeneity in both normal and tumor samples during SCTransform normalization.
 
-- R scripts can be found in this [folder](scripts).
+- R scripts with 3_ as prefix can be found in this [folder](scripts).
 
 **Figures:**
 ## Normal samples: Effect of regressing cell cycle scores during SCTransform normalization
@@ -77,20 +77,36 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 ---
 
 ### 4. Sample-Level Dimensionality Reduction, Clustering, Doublet Detection and Removal
+- **Toolkit used:** Seurat version 5.0 R package for initial dimensionality reduction and clustering for each sample.
+- The analyses below were used to evaluate sample quality, identify major cell populations, examine technical effects, and support doublet detection.
+  - Principal Component Analysis (PCA) 
+  - Uniform Manifold Approximation and Projection (UMAP)
+  - t-distributed Stochastic Neighbor Embedding (t-SNE)
 
-Initial dimensionality reduction and clustering were performed independently for each sample.
+- **Package used:** DoubletFinder R package for doublet removal per sample.
+  - Only cells classified as singlets were retained for downstream integration and analysis.
+  - Doublet removal was performed before integration to reduce the influence of artificial cell profiles on clustering and cell-type annotation.
 
-- Principal Component Analysis (PCA)
-- Nearest-neighbor graph construction
-- Initial graph-based clustering
-- Uniform Manifold Approximation and Projection (UMAP)
-- t-distributed Stochastic Neighbor Embedding (t-SNE)
+- R scripts with 4.1-4.6_ as prefixes can be found in this [folder](scripts).
 
-These analyses were used to evaluate sample quality, identify major cell populations, examine technical effects, and support doublet detection.
+**Figures:**
+##  Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization
 
-- Doublets were identified independently within each sample using the **DoubletFinder** R package.
-- Only cells classified as singlets were retained for downstream integration and analysis.
-- Doublet removal was performed before integration to reduce the influence of artificial cell profiles on clustering and cell-type annotation.
+![Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization](assets/Figure%206_%20Elbowplots_normalandtumor.png)
+
+##  Initial UMAP projections of individual normal and tumor samples before doublet removal and data integration
+
+![Initial UMAP projections of individual normal and tumor samples before doublet removal and data integration](assets/Figure%207_%20initial_LDA_UMAPs_normal%20and%20tumor.png)
+
+##  Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration
+
+![Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration](assets/Figure%207_%20initial_LDA_t-SNEs_normal%20and%20tumor.png)
+
+##  Identification and removal of doublets from the normal samples
+![Identification and removal of doublets from the normal samples](assets/Figure%209_%20Doubletfinder_normal.png)
+
+##  Identification and removal of doublets from the tumor samples
+![Identification and removal of doublets from the tumor samples](assets/Figure%209_%20Doubletfinder_tumor.png)
 
 ---
 
