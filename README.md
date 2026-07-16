@@ -41,7 +41,7 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 
 Cells with low transcript complexity, unusually high transcript counts, elevated mitochondrial RNA, or excessive hemoglobin-gene expression were removed.
 
-- R scripts with 1_ and 2_ as prefixes can be found in this [folder](scripts).
+- R scripts with "1_ and 2_" as prefixes can be found in this [folder](scripts).
 
 **Figures:**
 ## Normal samples initial QC
@@ -63,7 +63,7 @@ Cells with low transcript complexity, unusually high transcript counts, elevated
 
 Cell cycle effects had minimal influence on the overall transcriptional heterogeneity in both normal and tumor samples during SCTransform normalization.
 
-- R scripts with 3_ as prefix can be found in this [folder](scripts).
+- R scripts with "3_" as prefix can be found in this [folder](scripts).
 
 **Figures:**
 ## Normal samples: Effect of regressing cell cycle scores during SCTransform normalization
@@ -87,7 +87,7 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
   - Only cells classified as singlets were retained for downstream integration and analysis.
   - Doublet removal was performed before integration to reduce the influence of artificial cell profiles on clustering and cell-type annotation.
 
-- R scripts with 4.1-4.6_ as prefixes can be found in this [folder](scripts).
+- R scripts with "4.1-4.6_" as prefixes can be found in this [folder](scripts).
 
 **Figures:**
 ##  Elbow plots representing the variance across the first 50 principal components across the normal and tumor samples after normalization
@@ -103,23 +103,39 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 ![Initial t-SNE projections of individual normal and tumor samples before doublet removal and data integration](Figure%208_%20initial_LDA_t-SNEs_normal%20and%20tumor.png)
 
 ##  Identification and removal of doublets from the normal samples
+
 ![Identification and removal of doublets from the normal samples](assets/Figure%209_%20Doubletfinder_normal.png)
 
 ##  Identification and removal of doublets from the tumor samples
+
 ![Identification and removal of doublets from the tumor samples](assets/Figure%2010_%20Doubletfinder_tumor.png)
 
 ---
 
 ### 5. Data Integration and Batch-Effect Correction
-
-Multiple integration approaches were evaluated to reduce patient- and sample-specific batch effects while preserving biologically meaningful variation.
+- **Toolkit used:** Seurat version 5.0 R package for data integration.
+- Multiple integration approaches were evaluated to reduce patient- and sample-specific batch effects while preserving biologically meaningful variation.
 
 - **Integration methods compared:**
   - Canonical Correlation Analysis (CCA)
   - Reciprocal PCA (RPCA)
   - Harmony
 
-The resulting embeddings and cluster structures were compared across methods. **Harmony** was selected for downstream analyses based on sample mixing and preservation of biologically interpretable cell populations.
+- CCA, Harmony, and RPCA integration greatly improved shared cell alignment, yielding highly consistent clustering with 23, 24, and 24 clusters, respectively.
+-  **Harmony-integrated** data was selected for downstream analyses based on its proven accuracy and scalability in aligning diverse single-cell datasets.
+
+-  Cell cycle scores showed no major source of variation in the integrated dataset.
+
+- R scripts with "5.1-5.6_" as prefixes can be found in this [folder](scripts).
+
+**Figures:**
+##  Comparison of data integration approaches across samples
+
+![Comparison of data integration approaches across samples](assets/Figure%2011_%20Integration%20analysis.png)
+
+##  UMAP visualizations of integrated datasets colored by cell cycle phases
+
+![UMAP visualizations of integrated datasets colored by cell cycle phases](assets/Figure%2012_%20Integration%20analysis_cell%20cycle%20score.png)
 
 ---
 
