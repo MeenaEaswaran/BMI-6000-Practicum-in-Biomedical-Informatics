@@ -7,7 +7,9 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 
 ## Project Overview
 
-#### Bioinformatic Workflow 
+#### Bioinformatic Workflow: 
+
+The analysis was performed primarily in **R** using **Seurat version 5.0**, with additional tools for data normalization, doublet detection, automated cell-type annotation, functional enrichment, gene regulatory network analysis, and cell-cell communication analysis.
 
 ![Single-cell RNA-seq workflow](assets/Figure%201_Bioinformatic%20workflow.png)
 
@@ -24,7 +26,6 @@ This repository documents a **bioinformatics project** for the BMI 6000: Practic
 ---
 
 ### 2. Seurat Object Creation, Quality Control, and Data Preprocessing
-- **Toolkit used:** Seurat version 5.0 R package for creating a Seurat object, initial quality control performed per sample, and data preprocessing.
 
 - **Quality-control metrics:**
   - `nFeature_RNA`
@@ -55,8 +56,8 @@ Cells with low transcript complexity, unusually high transcript counts, elevated
 ---
 
 ### 3. Normalization and Cell-Cycle Assessment
-**- **Packages used:** the sctransform R package for independent-sample normalization, in place of the standard Seurat data normalization workflow.
 
+- Each sample was normalized independently using **sctransform**, in place of the standard Seurat data normalization workflow.
 -  Mitochondrial, ribosomal, and hemoglobin-expression percentages were evaluated as technical covariates.
 - `percent.mt`, `percent.ribo`, and `percent.hb` were regressed during normalization.
 -  `G1, S, and G2/M-phase` cell-cycle scores were assessed at the individual-sample level and were also regressed during normalization.
@@ -77,15 +78,15 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 ---
 
 ### 4. Sample-Level Dimensionality Reduction, Clustering, Doublet Detection and Removal
-- **Toolkit used:** Seurat version 5.0 R package for initial dimensionality reduction and clustering for each sample.
+
 - The analyses below were used to evaluate sample quality, identify major cell populations, examine technical effects, and support doublet detection.
   - Principal Component Analysis (PCA) 
   - Uniform Manifold Approximation and Projection (UMAP)
   - t-distributed Stochastic Neighbor Embedding (t-SNE)
 
-- **Package used:** DoubletFinder R package for doublet removal per sample.
-  - Only cells classified as singlets were retained for downstream integration and analysis.
-  - Doublet removal was performed before integration to reduce the influence of artificial cell profiles on clustering and cell-type annotation.
+- Doublets were identified independently within each sample using the **DoubletFinder** R package.
+- Only cells classified as singlets were retained for downstream integration and analysis.
+- Doublet removal was performed before integration to reduce the influence of artificial cell profiles on clustering and cell-type annotation.
 
 - R scripts with "4.1-4.6_" as prefixes can be found in this [folder](scripts).
 
@@ -113,18 +114,17 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 ---
 
 ### 5. Data Integration and Batch-Effect Correction
-- **Toolkit used:** Seurat version 5.0 R package for data integration.
-- Multiple integration approaches were evaluated to reduce patient- and sample-specific batch effects while preserving biologically meaningful variation.
 
+- Multiple integration approaches were evaluated to reduce patient- and sample-specific batch effects while preserving biologically meaningful variation.
 - **Integration methods compared:**
   - Canonical Correlation Analysis (CCA)
   - Reciprocal PCA (RPCA)
   - Harmony
 
 - CCA, Harmony, and RPCA integration greatly improved shared cell alignment, yielding highly consistent clustering with 23, 24, and 24 clusters, respectively.
--  **Harmony-integrated** data was selected for downstream analyses based on its proven accuracy and scalability in aligning diverse single-cell datasets.
+- **Harmony-integrated** data was selected for downstream analyses based on its proven accuracy and scalability in aligning diverse single-cell datasets.
 
--  Cell cycle scores showed no major source of variation in the integrated dataset.
+- Cell cycle scores showed no major source of variation in the integrated dataset.
 
 - R scripts with "5.1-5.6_" as prefixes can be found in this [folder](scripts).
 
@@ -141,24 +141,23 @@ Cell cycle effects had minimal influence on the overall transcriptional heteroge
 
 ### 6. Cell-Type Annotation and Proportion Analysis
 
-Cell identities were assigned using a combination of:
+- Cell identities were assigned using a combination of:
+  - Literature-guided canonical marker genes
+  - Cluster-specific gene-expression patterns
+  - Automated reference-based annotation using **SingleR**
+  - Manual review of epithelial, immune, stromal, and endothelial marker expression
 
-- Literature-guided canonical marker genes
-- Cluster-specific gene-expression patterns
-- Automated reference-based annotation using **SingleR**
-- Manual review of epithelial, immune, stromal, and endothelial marker expression
+- Major annotated cell populations included:
 
-Major annotated cell populations included:
+  - Epithelial cells
+  - T cells
+  - B cells
+  - Myeloid cells
+  - Natural killer cells
+  - Fibroblasts
+  - Endothelial cells
 
-- Epithelial cells
-- T cells
-- B cells
-- Myeloid cells
-- Natural killer cells
-- Fibroblasts
-- Endothelial cells
-
-Cell-type proportions were calculated by sample and experimental condition to compare cellular composition between tumor and normal tissues.
+- Cell-type proportions were calculated by sample and experimental condition to compare cellular composition between tumor and normal tissues.
 
 ---
 
